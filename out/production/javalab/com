@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+# Prompt for commit message
+read "msg?Enter your commit message: "
+
+# Add all changes
+git add .
+
+# Commit with the provided message
+git commit -m "$msg"

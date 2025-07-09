@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-class BoxEg {
+public class BoxEg {
     public static void main(String[] args) {
         JFrame body = new JFrame("Wish Java becomes shorter!");
         body.setLayout(new BoxLayout(body, BoxLayout.X_AXIS));

@@ -8,7 +8,7 @@ class CurdEg {
     public static void main(String[] args) {
         try {
             var conn = DriverManager.getConnection(URL, USER, "");
-            String insertQuery = "INSERT INTO users(name,email()VALUES(?,?))";
+            String insertQuery = "INSERT INTO users(name,email) VALUES(?,?))";
 
             var pstmt = conn.prepareStatement(insertQuery);
             pstmt.setString(1, "Gwen");

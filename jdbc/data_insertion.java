@@ -7,13 +7,13 @@ class Insert {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String DB_URL = "jdbc:mysqli://localhost:3306/BCA-db";
+        String DB_URL = "jdbc:mysql://localhost:3306/BCA-db";
 
         String DB_USERNAME = "root";
 
         try {
             Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, "");
-            String insertQuery = "INSERT INTO users(name,email,address,phone)VALUES(?,?)";
+            String insertQuery = "INSERT INTO users(name,email,address,phone)VALUES(?,?,?,?)";
             PreparedStatement ps = conn.prepareStatement(insertQuery);
 
             ps.setString(1, "Gwen");

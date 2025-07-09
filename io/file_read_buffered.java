@@ -4,14 +4,14 @@ class FileReadExample{
         try{
             BufferedReader reader = new BufferedReader(new FileReader("warning.txt"));
             String line;
-            while(line=reader.readline(1)!=num){
+            while( (line=reader.readLine())!=null){
                 System.out.println(line);
 
             }
             reader.close();
         }
         catch(IOException e){
-            System.out.println("error: " +e.getmessage(1));
+            System.out.println("error: " +e.getMessage());
         }
     }
 }

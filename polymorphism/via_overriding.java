@@ -7,24 +7,34 @@ class Animal{
     }
 }
 class Dog extends Animal{
-    @override
+    @Override
     void sound(){
         sout("Dog barks");
     }
 }
 class Cat extends Animal{
-    @override
+    @Override
     void sound(){
         sout("Cat meows");
     }
 }
-class Test{
+
+class Cow extends Animal{
+    //pass
+}
+
+
+class Test2{
     public static void main(String[] args)
     {
         Dog d = new Dog();
         d.sound();
 
         Cat c = new Cat();
+        c.sound();
+
+        Cow c2 = new Cow();
+        c2.sound();
         
     }
 }

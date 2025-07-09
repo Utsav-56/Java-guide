@@ -1,6 +1,8 @@
-class Student{
-    Private String name;
-    Private int age;
+package basics;
+
+class Student {
+    private String name;
+    private int age;
 
     void setName(String newName){
         this.name = newName;
@@ -21,7 +23,7 @@ class Test{
     public static void main (String[] args){
         Student s1 = new Student();
         try{
-            s1.name = "Gwen";
+//            s1.name = "Gwen";
         }catch(Exception e){
             s1.setName("Gwen");
 

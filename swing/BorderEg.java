@@ -1,11 +1,15 @@
+package swing;
+
 import javax.swing.*;
 import java.awt.*;
 
-class BorderEg {
+public class BorderEg {
     public static void main(String[] args) {
         JFrame body = new JFrame("Kotlin is way short than Java");
 
-        body.setLayout(new BorderLayout());
+       var borderLayout = new BorderLayout();
+
+        body.setLayout(borderLayout);
 
         body.add(new JButton("North"), BorderLayout.NORTH);
         body.add(new JButton("South"), BorderLayout.SOUTH);

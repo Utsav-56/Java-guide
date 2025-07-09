@@ -15,7 +15,7 @@ class Student implements Serializable {
 class SerializeExample {
     public static void main(String[] args) {
         try {
-            Student s1 = new Student(1, "Gwen");
+            Student1 s1 = new Student1(1, "Gwen");
             FileOutputStream fileout = new FileOutputStream("Student.ser");
 
             ObjectOutputStream out = new ObjectOutputStream(fileout);
