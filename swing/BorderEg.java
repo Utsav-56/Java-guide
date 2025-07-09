@@ -7,7 +7,7 @@ public class BorderEg {
     public static void main(String[] args) {
         JFrame body = new JFrame("Kotlin is way short than Java");
 
-       var borderLayout = new BorderLayout();
+        var borderLayout = new BorderLayout();
 
         body.setLayout(borderLayout);
 

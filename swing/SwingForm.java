@@ -2,8 +2,10 @@ package swing;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+
+
+
 
 public class SwingForm extends JFrame {
 
@@ -74,7 +76,7 @@ public class SwingForm extends JFrame {
 
         var btn = new JButton("Click me !");
 
-        btn.addActionListener((e) -> {
+        btn.addActionListener((ActionEvent e) -> {
             System.out.println("Button clicked !!");
         });
 

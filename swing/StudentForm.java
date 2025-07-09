@@ -13,48 +13,32 @@ public class StudentForm {
 
         // Name input
         JPanel namePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        namePanel.add(new JLabel("Name:"));
         JTextField nameField = new JTextField(20);
-        namePanel.add(nameField);
-        frame.add(namePanel);
+        addToPanel(namePanel, new JComponent[]{new JLabel("Name:"), nameField});
 
         // Email input
         JPanel emailPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        emailPanel.add(new JLabel("Email:"));
         JTextField emailField = new JTextField(20);
-        emailPanel.add(emailField);
-        frame.add(emailPanel);
+        addToPanel(emailPanel, new JComponent[]{new JLabel("Email:"), emailField});
 
         // Contact input
         JPanel contactPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        contactPanel.add(new JLabel("Contact:"));
         JTextField contactField = new JTextField(20);
-        contactPanel.add(contactField);
-        frame.add(contactPanel);
+        addToPanel(contactPanel, new JComponent[]{new JLabel("Contact:"), contactField});
 
         // Gender radio buttons
         JPanel genderPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        genderPanel.add(new JLabel("Gender:"));
-
         JRadioButton male = new JRadioButton("Male");
         JRadioButton female = new JRadioButton("Female");
         JRadioButton other = new JRadioButton("Other");
-
         ButtonGroup genderGroup = new ButtonGroup();
-
         genderGroup.add(male);
         genderGroup.add(female);
         genderGroup.add(other);
-
-        genderPanel.add(male);
-        genderPanel.add(female);
-        genderPanel.add(other);
-
-        frame.add(genderPanel);
+        addToPanel(genderPanel, new JComponent[]{new JLabel("Gender:"), male, female, other});
 
         // Stream radio buttons
         JPanel streamPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        streamPanel.add(new JLabel("Stream:"));
         JRadioButton plus2 = new JRadioButton("+2");
         JRadioButton bachelor = new JRadioButton("Bachelor");
         JRadioButton primary = new JRadioButton("Primary");
@@ -62,26 +46,24 @@ public class StudentForm {
         streamGroup.add(plus2);
         streamGroup.add(bachelor);
         streamGroup.add(primary);
-        streamPanel.add(plus2);
-        streamPanel.add(bachelor);
-        streamPanel.add(primary);
-        frame.add(streamPanel);
+        addToPanel(streamPanel, new JComponent[]{new JLabel("Stream:"), plus2, bachelor, primary});
 
         // Shift radio buttons
         JPanel shiftPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        shiftPanel.add(new JLabel("Shift:"));
         JRadioButton morning = new JRadioButton("Morning");
         JRadioButton day = new JRadioButton("Day");
         ButtonGroup shiftGroup = new ButtonGroup();
         shiftGroup.add(morning);
         shiftGroup.add(day);
-        shiftPanel.add(morning);
-        shiftPanel.add(day);
-        frame.add(shiftPanel);
+        addToPanel(shiftPanel, new JComponent[]{new JLabel("Shift:"), morning, day});
 
         // Submit button
         JButton submitButton = new JButton("Submit");
-        frame.add(submitButton);
+
+        // Add all panels and button to frame
+        addToFrame(frame, new JComponent[]{
+            namePanel, emailPanel, contactPanel, genderPanel, streamPanel, shiftPanel, submitButton
+        });
 
         // Action listener for submit button
         submitButton.addActionListener(new ActionListener() {
@@ -89,14 +71,11 @@ public class StudentForm {
                 String name = nameField.getText();
                 String email = emailField.getText();
                 String contact = contactField.getText();
-                String gender = male.isSelected() ? "Male" :
-                        female.isSelected() ? "Female" :
-                                other.isSelected() ? "Other" : "Not selected";
-                String stream = plus2.isSelected() ? "+2" :
-                        bachelor.isSelected() ? "Bachelor" :
-                                primary.isSelected() ? "Primary" : "Not selected";
-                String shift = morning.isSelected() ? "Morning" :
-                        day.isSelected() ? "Day" : "Not selected";
+                String gender = male.isSelected() ? "Male"
+                        : female.isSelected() ? "Female" : other.isSelected() ? "Other" : "Not selected";
+                String stream = plus2.isSelected() ? "+2"
+                        : bachelor.isSelected() ? "Bachelor" : primary.isSelected() ? "Primary" : "Not selected";
+                String shift = morning.isSelected() ? "Morning" : day.isSelected() ? "Day" : "Not selected";
 
                 // Print collected data to console
                 System.out.println("Name: " + name);
@@ -112,12 +91,15 @@ public class StudentForm {
         frame.setVisible(true);
     }
 
-    void addToPanel(JPanel pan, JComponent[] comps){
-        for (var comp : comps){
+    static void addToPanel(JPanel pan, JComponent[] comps) {
+        for (var comp : comps) {
             pan.add(comp);
         }
     }
 
-
-
+    static void addToFrame(JFrame frame, JComponent[] components) {
+        for (var item : components) {
+            frame.add(item);
+        }
+    }
 }

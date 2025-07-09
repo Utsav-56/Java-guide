@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.*;
 
-class Insert {
+public class InsertExample {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
