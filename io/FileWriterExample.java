@@ -1,7 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
-class FileWriterExample{
+public class FileWriterExample{
     public static void main(String[] args){
         try{
             FileWriter writer = new FileWriter("output.txt");
