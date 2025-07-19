@@ -1,3 +1,5 @@
+## A proper pdf: [click here to download](https://github.com/Utsav-56/Java-guide/blob/main/lib/Java%20Notes%20mini%20all%20-%20v5.pdf)
+
 ***
 
 # Table of Contents
@@ -102,10 +104,20 @@
     - [Difference between Iterator and Comparator](#difference-between-iterator-and-comparator)
     - [What is Comparable in Java?](#what-is-comparable-in-java)
 
+## Sorting using Comparable and Comparator
+
+- [Sorting using Comparable](#Sorting-with-Comparable)
+
+- [Sorting using Comparator](#Sorting-with-Comparator)
 
 
 
 ***
+
+## A proper pdf to the notes can be found here:
+# [click here to download pdf notes](https://github.com/Utsav-56/Java-guide/blob/main/lib/Java%20Notes%20mini%20all%20-%20v5.pdf)
+
+
 
 
 # Exceptions Handling in Java
@@ -947,7 +959,8 @@ The `String` class provides many useful methods to perform operations like searc
 > -   Use **`Comparable`** when you want to define a single, natural default sorting order for a class (e.g., sorting employees by ID).
 > -   Use **`Comparator`** when you need to sort objects in various different ways (e.g., sorting employees by name, then by salary, then by age).
 
-# Example Sorting with Comparable and Comparator
+# Sorting with Comparable and Comparator
+
 ## Sorting with Comparable
 ```java
 import java.util.*;
