@@ -1,4 +1,6 @@
-## A proper pdf: [click here to download](https://github.com/Utsav-56/Java-guide/blob/main/lib/Java%20Notes%20mini%20all%20-%20v5.pdf)
+## A proper pdf:
+
+<a href="https://raw.githubusercontent.com/utsav-56/java-guide/main/lib/Java%20Notes%20mini%20all%20-v5.pdf" download>Download Java Notes PDF</a>
 
 ***
 
@@ -114,9 +116,11 @@
 
 ***
 
-## A proper pdf to the notes can be found here:
-# [click here to download pdf notes](https://github.com/Utsav-56/Java-guide/blob/main/lib/Java%20Notes%20mini%20all%20-%20v5.pdf)
+## A proper pdf:
 
+<a href="https://raw.githubusercontent.com/utsav-56/java-guide/main/lib/Java%20Notes%20mini%20all%20-v5.pdf" download>Download Java Notes PDF</a>
+
+<hr><hr>
 
 
 
