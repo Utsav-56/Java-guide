@@ -582,12 +582,14 @@ In the **class declaration line**:
 2.  Implement them in a **single class**, separated by commas.
 
 **Example Program:**
-
+![](notemedia/media/image21.png)
 
 
 <hr>
 
 ## Example of abstract class
+
+![](./notemedia/media/image22.png)
 
 > **Explanation:**
 > -   The class `Animal` is declared using the `abstract` keyword.
@@ -624,12 +626,16 @@ Java provides the **`java.io` package** for file handling.
 <hr>
 
 ## Example Programs
+
 **Before you start:**
 1.  Import necessary classes like `java.io.File`, `java.io.IOException`, etc. (or just `java.io.*`).
 2.  Wrap file operations in a `try-catch` block to handle `IOException`.
 
+
+
 ### Creating a new file
 
+![](./notemedia/media/image23.png)
 
 > **Explanation:**
 > -   The `File` class is used to represent a file path.
@@ -637,17 +643,30 @@ Java provides the **`java.io` package** for file handling.
 
 ### Writing to a file
 
+![](./notemedia/media/image24.png)
+
 > **Explanation:**
 > -   `FileWriter` is used to write character streams to a file.
 > -   The `write()` method writes the given text to the file.
 > -   Always call `close()` to save the changes and release resources.
 
 ### Reading from a File
+![](./notemedia/media/image25.png)
 
 > **Explanation:**
 > -   The `Scanner` class can be used to read from a file line by line.
 
+>** Other ways to read from a file:**
+#### Using `FileReader` and `readLine()`
+
+![](./notemedia/media/image26.png)
+
+
+
+
 ### Delete a file
+
+![](./notemedia/media/image27.png)
 
 > **Explanation:**
 > -   The `delete()` method deletes the file and returns `true` if successful.
@@ -658,9 +677,6 @@ Java provides the **`java.io` package** for file handling.
 | **Write**   | `FileWriter` + `write()`   |
 | **Read**    | `Scanner` + `nextLine()`   |
 | **Delete**  | `File` + `delete()`        |
-
-Of course. Here is the continued formatted markdown, including a new table of contents for these sections, with proper linking, styling, and the original images preserved.
-
 
 ## Copying content from one file to another
 To copy content, you essentially read from a source file and write to a destination file simultaneously.
@@ -704,6 +720,7 @@ To copy content, you essentially read from a source file and write to a destinat
 > -   **Deserialization** → **Reading** an object → **`ObjectInputStream`**.
 
 ## Serialization Example
+![](./notemedia/media/image29.png)
 
 
 
@@ -715,6 +732,7 @@ To copy content, you essentially read from a source file and write to a destinat
 > 4.  The stream is closed to ensure all data is saved.
 
 ## Deserialization Example:
+![](./notemedia/media/image30.png)
 
 
 
@@ -751,6 +769,8 @@ To copy content, you essentially read from a source file and write to a destinat
 
 ### Example: Reading a file using Byte Stream
 
+![](./notemedia/media/image31.png)
+
 
 
 <hr>
@@ -765,7 +785,7 @@ To copy content, you essentially read from a source file and write to a destinat
 -   **`Writer`**: Abstract class for writing characters. (e.g., `FileWriter`)
 
 ### Example: Reading a File using Character Stream
-
+![](./notemedia/media/image32.png)
 
 
 > **Learning Tip:** The logic for reading a file with Byte Streams and Character Streams is nearly identical. The only significant difference is the classes you instantiate (`FileInputStream`/`FileOutputStream` vs. `FileReader`/`FileWriter`). If you understand one, you understand the other.
@@ -778,7 +798,9 @@ To copy content, you essentially read from a source file and write to a destinat
 > **Definition:** A **`String`** in Java is a **sequence of characters**. It is an object of the `java.lang.String` class.
 
 **Example:**
-`String s1 = "Hello";`
+```java
+String s1 = "Hello";
+```
 
 Here, `"Hello"` is a **String literal**.
 
@@ -924,3 +946,93 @@ The `String` class provides many useful methods to perform operations like searc
 > **Final Tip:**
 > -   Use **`Comparable`** when you want to define a single, natural default sorting order for a class (e.g., sorting employees by ID).
 > -   Use **`Comparator`** when you need to sort objects in various different ways (e.g., sorting employees by name, then by salary, then by age).
+
+# Example Sorting with Comparable and Comparator
+## Sorting with Comparable
+```java
+import java.util.*;
+
+class STudent implements Comparable<STudent> {
+    int id;
+    String name;
+    int age;
+
+    STudent(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    // Implementing compareTo method to sort by age
+    public int compareTo(STudent s) {
+        if (age == s.age)
+            return 0;
+        else if (age > s.age)
+            return 1;
+        else
+            return -1;
+    }
+}
+
+public class ComparableExample {
+    public static void main(String[] args) {
+        ArrayList<STudent> list = new ArrayList<>();
+        list.add(new STudent(101, "Ram", 22));
+        list.add(new STudent(102, "Shyam", 20));
+        list.add(new STudent(103, "Hari", 21));
+
+        Collections.sort(list); // sorts using compareTo()
+
+        System.out.println("Students sorted by age:");
+        for (STudent s : list) {
+            System.out.println(s.id + " " + s.name + " " + s.age);
+        }
+    }
+}
+```
+
+## Sorting with Comparator
+```java
+import java.util.*;
+
+class Student {
+    int id;
+    String name;
+    int age;
+
+    Student(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+}
+
+class AgeComparator implements Comparator<STudent> {
+    public int compare(STudent s1, STudent s2) {
+        if (s1.age == s2.age)
+            return 0;
+        else if (s1.age > s2.age)
+            return 1;
+        else
+            return -1;
+    }
+}
+
+public class ComparatorExample {
+    public static void main(String[] args) {
+        ArrayList<STudent> list = new ArrayList<>();
+
+        list.add(new STudent(101, "Ram", 22));
+        list.add(new STudent(102, "Shyam", 20));
+        list.add(new STudent(103, "Hari", 21));
+
+        System.out.println("Sorting students by age:");
+        Collections.sort(list, new AgeComparator());
+
+        for (STudent s : list) {
+            System.out.println(s.id + " " + s.name + " " + s.age);
+        }
+    }
+}
+```
+
