@@ -1,15 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class BoxEg {
-    public static void main(String[] args) {
-        JFrame body = new JFrame("Wish Java becomes shorter!");
-        body.setLayout(new BoxLayout(body, BoxLayout.X_AXIS));
+public class BoxEg extends JFrame {
+
+    public BoxEg() {
+
+        super("Wish Java becomes shorter!");
+        setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
         for (int i = 0; i < 3; i++) {
-            body.add(new JButton("" + i));
+            add(new JButton("" + i));
         }
-        body.setVisible(true);
+        setVisible(true);
     }
 }
-

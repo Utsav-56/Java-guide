@@ -26,7 +26,6 @@ public class JPanelExample extends JFrame {
         add(nameInputPanel);
 
 
-
         JPanel emailInputPanel = new JPanel();
         emailInputPanel.setLayout(new FlowLayout());
 

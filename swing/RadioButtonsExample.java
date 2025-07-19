@@ -19,24 +19,31 @@ public class RadioButtonsExample {
         var frame = new JFrame("Radio Button Examples");
         frame.setLayout(new GridLayout(1, 4));
 
-
+        // very very first create the panel
         JPanel genderPanel = new JPanel();
         genderPanel.setLayout(new FlowLayout());
 
 
+        // first create the radio buttons
         JRadioButton genMale = new JRadioButton("Male");
         JRadioButton genFemale = new JRadioButton("Female");
         JRadioButton genOther = new JRadioButton("Other");
 
+        // second create the button group
         ButtonGroup genderGroup = new ButtonGroup();
 
+        // third add the radio buttons to the button group
         genderGroup.add(genMale);
         genderGroup.add(genFemale);
         genderGroup.add(genOther);
 
+        // fourth add the radio buttons to the panel
         genderPanel.add(genMale);
         genderPanel.add(genFemale);
         genderPanel.add(genOther);
+
+        // add the panel to the frame
+        frame. add(genderPanel);
 
 
         JButton checkButton = new JButton("Check Selection");

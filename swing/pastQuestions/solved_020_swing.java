@@ -16,6 +16,7 @@ public class solved_020_swing extends JFrame {
     solved_020_swing() {
         setTitle("QSN solved");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         setLayout(new GridLayout(4, 1));
 
 

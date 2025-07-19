@@ -22,7 +22,7 @@ class DeserializeEg {
             FileInputStream fileIn = new FileInputStream("Student.ser");
             ObjectInputStream objIn = new ObjectInputStream(fileIn);
 
-            Student s =  objIn.readObject();
+            Student s = (Student) objIn.readObject();
 
             objIn.close();
             fileIn.close();

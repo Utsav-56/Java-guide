@@ -27,8 +27,10 @@ class FlowEg extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 300);
 
-        var myLayout = new FlowLayout();
+        FlowLayout myLayout = new FlowLayout();
         setLayout(myLayout);
+
+        setLayout(new FlowLayout());
 
         ///  add more mody and component here
 
