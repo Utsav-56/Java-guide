@@ -7,12 +7,19 @@ import java.io.Serializable;
 class SerializeExample {
     public static void main(String[] args) {
         try {
-            Student s1 = new Student(1, "Gwen");
+
 
             FileOutputStream fileout = new FileOutputStream("Student.ser");
             ObjectOutputStream objOut = new ObjectOutputStream(fileout);
 
-            objOut.writeObject(s1);
+
+            Student s = new Student(1, "Gwen");
+
+            objOut.writeObject(s);
+
+
+
+
 
             objOut.close();
             fileout.close();

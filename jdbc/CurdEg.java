@@ -32,6 +32,7 @@ class JdbcCrudExample2 {
 
             // CREATE
             String insertSQL = "INSERT INTO users (name, email) VALUES (?, ?)";
+
             try (PreparedStatement pstmt = conn.prepareStatement(insertSQL)) {
                 pstmt.setString(1, "Alice");
                 pstmt.setString(2, "alice@example.com");

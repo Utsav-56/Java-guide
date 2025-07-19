@@ -14,8 +14,7 @@ public class CopyContentExample {
             File f = new File("example.txt");
             Scanner sc = new Scanner(f);
 
-            File writingFile = new File("example2.txt");
-            FileWriter fw = new FileWriter(writingFile);
+            FileWriter fw = new FileWriter("example2.txt");
 
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
