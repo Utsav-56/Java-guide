@@ -44,6 +44,7 @@ public class JPanelExample extends JFrame {
         panel.setLayout(panelLayout);
 
         JLabel label = new JLabel("Choose an option:");
+
         JButton button1 = new JButton("Option 1");
         JButton button2 = new JButton("Option 2");
 

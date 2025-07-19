@@ -3,22 +3,22 @@ package swing;
 import javax.swing.*;
 import java.awt.*;
 
-public class BorderEg {
-    public static void main(String[] args) {
-        JFrame body = new JFrame("Kotlin is way short than Java");
+public class BorderEg extends JFrame {
+    BorderEg() {
+        setTitle("Kotlin is way short than Java");
 
         var borderLayout = new BorderLayout();
 
-        body.setLayout(borderLayout);
+        setLayout(borderLayout);
 
-        body.add(new JButton("North"), BorderLayout.NORTH);
-        body.add(new JButton("South"), BorderLayout.SOUTH);
-        body.add(new JButton("East"), BorderLayout.EAST);
-        body.add(new JButton("West"), BorderLayout.WEST);
-        body.add(new JButton("Center"), BorderLayout.CENTER);
+        add(new JButton("North"), BorderLayout.NORTH);
+        add(new JButton("South"), BorderLayout.SOUTH);
+        add(new JButton("East"), BorderLayout.EAST);
+        add(new JButton("West"), BorderLayout.WEST);
+        add(new JButton("Center"), BorderLayout.CENTER);
 
-        body.setSize(400, 300);
-        body.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        body.setVisible(true);
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
 }

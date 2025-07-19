@@ -15,9 +15,7 @@ public class JdbcCrudExample {
             String insertSQL = "INSERT INTO users (name, email) VALUES (?, ?)";
             PreparedStatement pstmt = conn.prepareStatement(insertSQL);
 
-
-            for (int i = 0; i < 99; i++) {
-
+            for (int i = 0; i < 5; i++) {
 
                 System.out.print("Enter name: ");
                 String name = sc.nextLine();
@@ -35,9 +33,7 @@ public class JdbcCrudExample {
                 } else {
                     System.out.println("Failed to insert data.");
                 }
-
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -85,16 +81,14 @@ class ReadEspecificExample {
             PreparedStatement pstmt = conn.prepareStatement(selectSQL);
 
 
-
             pstmt.setString(1, "mgmt");
-
 
 
             ResultSet rs = pstmt.executeQuery();
 
             while (rs.next()) {
                 String name = rs.getString("name");
-               String email = rs.getString("email");
+                String email = rs.getString("email");
 
                 System.out.printf("Name: %s, Email: %s , \n", name, email);
             }

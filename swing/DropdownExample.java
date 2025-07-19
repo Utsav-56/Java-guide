@@ -17,9 +17,9 @@ public class DropdownExample {
         JLabel label = new JLabel("Select your stream:");
 
         // Create dropdown with items
-        String[] streams = {"+2", "Bachelor", "Primary"};
+        String[] options = {"+2", "Bachelor", "Primary"};
 
-        JComboBox<String> streamDropdown = new JComboBox<String>(streams);
+        JComboBox<String> streamDropdown = new JComboBox<String>(options);
 
         // Create submit button
         JButton submitButton = new JButton("Submit");

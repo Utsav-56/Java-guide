@@ -19,21 +19,24 @@ public class RadioButtonsExample {
         var frame = new JFrame("Radio Button Examples");
         frame.setLayout(new GridLayout(1, 4));
 
-        ButtonGroup genderGroup = new ButtonGroup();
+
+        JPanel genderPanel = new JPanel();
+        genderPanel.setLayout(new FlowLayout());
+
 
         JRadioButton genMale = new JRadioButton("Male");
         JRadioButton genFemale = new JRadioButton("Female");
         JRadioButton genOther = new JRadioButton("Other");
 
-
-        frame.add(genMale);
-        frame.add(genFemale);
-        frame.add(genOther);
-
+        ButtonGroup genderGroup = new ButtonGroup();
 
         genderGroup.add(genMale);
         genderGroup.add(genFemale);
         genderGroup.add(genOther);
+
+        genderPanel.add(genMale);
+        genderPanel.add(genFemale);
+        genderPanel.add(genOther);
 
 
         JButton checkButton = new JButton("Check Selection");
@@ -56,5 +59,17 @@ public class RadioButtonsExample {
 
         frame.setSize(400, 300);
         frame.setVisible(true);
+    }
+}
+
+
+
+
+
+class RadioApp extends JFrame{
+    RadioApp() {
+
+
+
     }
 }
