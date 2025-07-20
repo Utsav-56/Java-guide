@@ -1,6 +1,6 @@
 ## A proper pdf:
 
-<a href="https://raw.githubusercontent.com/utsav-56/java-guide/main/lib/Java%20Notes%20mini%20all%20-v5.pdf" download>Download Java Notes PDF</a>
+<a href="https://raw.githubusercontent.com/utsav-56/java-guide/" >For a proper Pdf ask @i_am_utsav on Instagram or email:: Utsavpokhrel200@gmail.com</a>
 
 ***
 
@@ -116,10 +116,11 @@
 
 ***
 
-## A proper pdf:
-
+## A proper pdf: 
+upcoming soon
+<!--
 <a href="https://raw.githubusercontent.com/utsav-56/java-guide/main/lib/Java%20Notes%20mini%20all%20-v5.pdf" download>Download Java Notes PDF</a>
-
+-->
 <hr><hr>
 
 
